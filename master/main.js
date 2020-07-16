@@ -1,15 +1,15 @@
 /**
  * @name 统一注册外部样式等
  */
-import './install';
+import './src/install';
 
 /**
  * @name React实例化
  */
-import { reactRender } from './render'
+import { reactRender } from './src/render'
 reactRender()
 
 /**
  * @name 注册微应用并启动微前端
  */
-import './appRegister'
+import './src/appRegister'

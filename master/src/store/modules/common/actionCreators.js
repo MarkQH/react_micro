@@ -1,6 +1,6 @@
 import * as actionTypes from './constant';
 import { fromJS } from 'immutable';
-import { getBannerRequest, getRecommendListRequest } from "@/api/request";
+import { getBannerRequest } from "@/api/request";
 
 export const changeBnannerList = (data) => ({
   type: actionTypes.CHANGE_BANNER,

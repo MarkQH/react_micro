@@ -49,7 +49,7 @@ const appContainer = '#subapp-container';
  */
 
 const payload = {
-  storeData: store.getters,
+  storeData: store.getState(),
   libs,
   emits,
   pager,
@@ -62,24 +62,24 @@ const payload = {
 // 导入接口获取子应用注册表
 getMenuApi().then(({ data }) => {
   // 验证请求错误
-  if (data.code !== 200) {
-    wlMessage({
-      type: 'error',
-      message: "请求错误"
-    })
-    return;
-  }
-  // 验证数据有效性
-  let _res = data.data || [];
-  if (_res.length === 0) {
-    wlMessage({
-      type: 'error',
-      message: "没有可以注册的子应用数据"
-    })
-    return;
-  }
+  // if (data.code !== 200) {
+  //   wlMessage({
+  //     type: 'error',
+  //     message: "请求错误"
+  //   })
+  //   return;
+  // }
+  // // 验证数据有效性
+  // let _res = data.data || [];
+  // if (_res.length === 0) {
+  //   wlMessage({
+  //     type: 'error',
+  //     message: "没有可以注册的子应用数据"
+  //   })
+  //   return;
+  // }
   // 处理菜单
-  store.dispatch('menu/setUserMenu', _res);
+  // store.dispatch('menu/setUserMenu', _res);
   // 处理子应用注册表数据
   let apps = []; // 子应用数组盒子
   let defaultApp = null; // 默认注册应用

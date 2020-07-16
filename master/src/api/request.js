@@ -1,6 +1,7 @@
 import { axiosInstance } from "./config";
-
+import { appConfig } from '../mockData';
 export const getMenuApi = (data) => {
+  return Promise.resolve(appConfig)
   return axiosInstance({
     url: '',
     method: 'post',

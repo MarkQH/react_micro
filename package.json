@@ -1,0 +1,13 @@
+{
+  "name": "rrt-qiankun",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "install": "node run/install.js type=full",
+    "config_install": "node run/install.js type=config",
+    "start": "node run/start.js type=full",
+    "config_start": "node run/start.js type=config",
+    "build": "node run/build.js type=full",
+    "config_build": "node run/build.js type=config"
+  }
+}
